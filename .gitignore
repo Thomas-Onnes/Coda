@@ -7,8 +7,11 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
 venv/
+
+# Env
+.env
+.env.*
 
 # Django
 *.log
