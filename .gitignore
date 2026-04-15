@@ -9,9 +9,12 @@ __pycache__/
 *.pyd
 venv/
 
-# Env
+# Enviroment files
 .env
 .env.*
+
+# Allow example env files
+!.env.example
 
 # Django
 *.log
