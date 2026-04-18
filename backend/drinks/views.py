@@ -1,8 +1,12 @@
-from rest_framework import viewsets
+from rest_framework import generics
 from .models import Drink
 from .serializer import DrinkSerializer
 from django.shortcuts import render
 
-class DrinkViewSet(viewsets.ModelViewSet):
+class DrinkListCreateView(generics.ListCreateAPIView):
+    queryset = Drink.objects.all()
+    serializer_class = DrinkSerializer
+
+class DrinkUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Drink.objects.all()
     serializer_class = DrinkSerializer

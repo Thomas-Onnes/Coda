@@ -1,8 +1,7 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import DrinkViewSet
+from .views import DrinkListCreateView, DrinkUpdateDestroyView
 
-router = DefaultRouter()
-router.register("drinks", DrinkViewSet)
-
-urlpatterns = router.urls
+urlpatterns = [
+    path("drinks/", DrinkListCreateView.as_view()),
+    path("drinks/<int:pk>", DrinkUpdateDestroyView.as_view())
+]
