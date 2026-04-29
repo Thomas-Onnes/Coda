@@ -33,7 +33,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
-    'drinks.apps.DrinksConfig',
+    'apps.recommendations.apps.RecommendationsConfig',
+    'apps.drinks.apps.DrinksConfig',
+    'apps.users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
